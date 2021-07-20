@@ -1,0 +1,87 @@
+The 3D animation system combines meshes and animations
+using the Gef library.
+
+When using the 3D animation system you can control the
+camera using the arrow keys
+
+There is no specific naming convention required for
+3D animations in this system as long as they are 
+compatible .scn files.
+
+Example Mesh: xbot.scn
+Example Animation: walking_inplace.scn
+
+
+Gui Controls:
+Controls can be found at Project->Properties
+
+	The file name can be changed to load in a new texture
+	or mesh, the file name should include the full filepath
+	and not include _tex, _ske or the file type in the name
+
+	2D Animation: Switch to 2D animation, either sprite or
+	rig depending on what was loaded most recently
+
+	Animation 1: Full file path to starting animation
+
+	Animation 1 Speed: The speed that represents this
+	animation
+
+	Animation 2: Full file path to next animation for blending
+
+	Animation 2 Speed: The speed that represents this
+	animation
+
+	Speed: The current speed of the character
+
+	Speed Multiplier: Speed of blending between animations
+
+	Minimum Transition Speed: minimum amount of blending
+	accepted
+
+	Character Rotation: The rotation of the mesh in world-space
+
+	Character Size: Size of the mesh
+
+	Speed indicator shows current speed of the character
+	
+	Blend indicator shows the current blend value between
+	the animations as a percentage.
+
+
+Keyboard Controls:
+	Space Bar: Toggle Ragdoll
+
+	L: Increase the speed of the character
+
+	K: Decrease the speed of the character
+
+	A: Rotate the mesh clockwise
+
+	D: Rotate the mesh anticlockwise
+
+	W: Increase the size of the mesh
+
+	S: Decrease the size of the mesh
+
+	Left Arrow: Move camera view to the left
+
+	Right Arrow: Move camera view to the right
+
+	Up Arrow: Move camera view up
+
+	Down Arrow: Move camera view down
+
+
+Notes:
+The speed of Animation1 can be faster or slower than Animation2
+However they cannot be the same, if the user tries to input the
+same speed it will be offset by a minimum value.
+If the speed of the character is outwith the range of the new
+speeds the character will be clamped to the new maximum/minimum
+
+Animation1 and Animation2 cannot point to the same file, upon
+entering the same animation Animation 1 and 2 will swap automatically
+for example: starting walk->run, changing walk to run would cause the 
+new animations to be: run->walk.
+

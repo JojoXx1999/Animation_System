@@ -1,0 +1,53 @@
+Attributes can be changed in real-time by 
+going to Project->Properties.
+the properties displayed will change depending
+on the animation type currently being displayed,
+for example: 2D rig, 2D sprite or 3D animations.
+
+The file name can be altered to load a new
+texture or Mesh, this uses the absolute file
+path and files can be loaded from outwith the
+solution directory.
+
+The file type name should NOT be included in
+the file name this will be added for you by the
+program, accepted types are .scn and .json
+The file name should also NOT include the
+_tex or _ske at the end.
+
+For example, for a file: 'Dragon_tex.png'
+including Jsons: 'Dragon_tex.json' and
+'Dragon_ske.json' the user should only
+input 'Dragon' to load this aniamtion
+
+2D or 3D files can be inputted and the program
+will display the correct animation type, if two
+files contain the same name with different types
+the 2D file will be loaded.
+if the inputted file path is incorrect the program
+will automatically load and display the previous
+3D animation.
+
+Files can also be loaded by going to 
+File->Load_Mesh_or_Texture. This will open
+a file system, the red arrow can be used to 
+exit the current file.
+Files of interest are highlighted in yellow
+this includes folders, .scn and .json files
+Upon selecting a valid .scn or .json file the 
+texture/mesh and it's corresponding
+animation will be loaded in.
+For 2D animation either the _tex or _ske
+files can be selected, for 3D the mesh must
+be selected, selecting an invalid file will
+cause the program to load in the default 3D mesh.
+
+The diagnostics window displays the current time
+taken each frame (in milliseconds) and the fps
+(frames per second). This window is displayed by
+default but can be turned off in the Debug tab.
+
+Every mesh, texture and animation that is loaded into
+the system is stored to reduce memory costs as they only
+need to be created/loaded in once.
+

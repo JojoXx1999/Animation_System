@@ -1,0 +1,18 @@
+Bug:
+Loading in an animation file instead of a mesh
+and then proceeding to change the running animations
+causes the program to crash because it cannot find 
+the required mesh
+
+Fix: 
+Introduce error handling to test load the selected
+mesh to ensure it doesn't fail, same as what is already
+implemented in 2D animation; If mesh/texture doesn't
+exist, revert to a known animation
+
+Bug:
+Similarly, loading in an animation file that doesnt exist will cause
+the application as it can't find the relevant data
+
+Fix: 
+Same as above

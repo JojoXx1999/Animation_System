@@ -1,0 +1,101 @@
+The 2D animation system contains 2 different types
+of animations that can be displayed: Rig and Sprite.
+
+Rig animations use an image containing different components 
+of the texture and connects them using bones.
+
+Sprite animations use a Texture atlas which contain
+each sprite that can be represented.
+
+The correct behaviour for each type of these animations
+is contained inside .json files.
+
+
+
+Rig Animation:
+Specific naming convention is required for this system:
+	The png and texture json files should end: _tex
+
+	The skeleton json files should end: _ske
+
+	For example: Dragon_tex.png, Dragon_tex.json, Dragon_ske.json
+
+
+Gui Controls:
+Controls can be found at Project->Properties
+
+	The file name can be changed to load in a new texture
+	or mesh, the file name should include the full filepath
+	and not include _tex, _ske or the file type in the name	
+
+	3D animation: This button will load in the current
+	3D animation mesh and animation
+
+	Sprite Animation: This button will switch to the 2D Sprite
+	Animation
+
+	Walk: Causes the character to walk in place
+	
+	Idle: Sets the animation to Idle
+	
+	Jump: Causes the character to jump
+
+	Max Jump Height: The highest point (above ground level) that
+	the player can reach
+
+	Ground Level: The lowest point that the player can reach 
+	(Where upwards is the negative direction)
+
+
+Keyboard Controls:
+
+	Left Arrow: Move the character to the left
+
+	Right Arrow: Move the character to the right
+
+	Up Arrow: Increase the size of the rig
+
+	Down Arrow: Decrease the size of the rig
+
+	Space Bar: Causes the chartacter to jump
+
+
+
+Sprite Animation:
+Specific naming convention is required for this system:
+	The png and texture json files should end: _tex
+
+	The skeleton json files should end: _ske
+
+For example: girl_and_boy_tex.json, girl_and_boy_ske.json
+	     girl_and_boy_tex.png
+
+
+Gui Controls:
+Controls can be found at Project->Properties
+
+	The file name can be changed to load in a new texture
+	or mesh, the file name should include the full filepath
+	and not include _tex, _ske or the file type in the name
+
+	3D animation: This button will load in the current
+	3D animation mesh and animation
+
+	Rig Animation: This button will switch to the 2D Rig
+	Animation
+
+	Next Animation From Texture Atlas: This button will
+	display the next animation from the texture atlas in the
+	order they were loaded.
+
+	Previous Animation From Texture Atlas: This button will
+	display the previous animation from the texture atlas in the
+	order they were loaded.
+
+	Random Animation From Texture Atlas: This button will
+	display a random animation from the texture atlas.
+
+
+Keyboard Controls:
+	None
+
