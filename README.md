@@ -3,7 +3,9 @@ Animation System that handles 2D and 3D models
 2D models can use a sprite atlas or skeleton
 Data for the models and animations are read from JSON files
 
-The main code for this project is found in build/vx2017
+This project requires bullet3 and gef_abertay to be contained within the same folder in order to run
+
+The main code for this project is found in build/vs2017
 
 Inside the Animation_Parser files are seperated into 2D or 3D depending on which part of the animation
 system they are used for.
